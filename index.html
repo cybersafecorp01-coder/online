@@ -3403,6 +3403,55 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
             }
         });
     </script>
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<a href="#" id="whatsappBtn" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.4);
+}
+
+.whatsapp-float i {
+    margin-top: 2px;
+}
+</style>
+
+<script>
+document.getElementById("whatsappBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const phone = "5511961244602"; // Número com DDI + DDD
+    const message = encodeURIComponent("Olá, desejo um atendimento!");
+    const url = `https://wa.me/${phone}?text=${message}`;
+
+    window.open(url, "_blank");
+});
+</script>
+
 </body>
 
 </html>
