@@ -313,7 +313,7 @@ body {
 }
 
 .card-media {
-    height: 190px;
+    height: auto;
 }
 
 .card-media img {
